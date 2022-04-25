@@ -52,8 +52,8 @@ var Exclusions = {
   isEnabledForUrl(url) {
     const rule = Exclusions.getRule(url);
     return {
-      isEnabledForUrl: !rule || (rule.passKeys.length > 0),
-      passKeys: rule ? rule.passKeys : ""
+      isEnabledForUrl: rule,
+      passKeys: ""
     };
   },
 
